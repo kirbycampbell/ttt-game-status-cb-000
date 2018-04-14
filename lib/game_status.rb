@@ -18,9 +18,9 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     win_combination.any?{|i| i = ["X", "X", "X"]}
-    return true
+    return false
     win_combination.any?{|i| i = ["O", "O", "O"]}
-    return true
+    return false
     win_combination.none?{|i| i = ["X", "X", "X"]}
     return false
     win_combination.none?{|i| i = ["O", "O", "O"]}
