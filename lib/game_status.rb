@@ -37,3 +37,11 @@ end
 def over?(board)
   draw?(board) == true || full?(board) == true || won?(board) != nil
 end
+
+def winner(board)
+  if won?(board) == ["X", "X", "X"]
+    return "X"
+  elsif won?(board) == ["O", "O", "O"]
+    return "O"
+  end
+end
