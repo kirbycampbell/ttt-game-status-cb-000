@@ -17,12 +17,8 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if WIN_COMBINATIONS.each do |win_combo|
+  WIN_COMBINATIONS.each do |win_combo|
     board[win_combo[0]] == board[win_combi[1]] && board[win_combo[0]] == board[win_combo[2]] && position_taken?(board, win_combo[1])
-        return true
-    else 
-        false
-    end
+
   end
 end
-
