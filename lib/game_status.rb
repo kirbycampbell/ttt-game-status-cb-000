@@ -25,7 +25,7 @@ end
 
 def full?(board)
   board.none? do |i|
-    i == " " || i.nil?
+    i == " "
   end
 end
 
