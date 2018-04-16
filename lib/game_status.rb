@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.find do |win_combo|
      board[win_combo[0]] == board[win_combi[1]] && board[win_combo[0]] == board[win_combo[2]] && position_taken?(board, win_combo[1])
-         return WIN_COMBINATIONS
+
   end
 end
 
@@ -28,3 +28,6 @@ def full?(board)
     i == " " || i.nil?
   end
 end
+
+def draw?(board)
+  board.
