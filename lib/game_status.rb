@@ -3,6 +3,7 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],
@@ -16,14 +17,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-    win_combination.any?{|i| i = ["X", "X", "X"]}
-    return false
-    win_combination.any?{|i| i = ["O", "O", "O"]}
-    return false
-    win_combination.none?{|i| i = ["X", "X", "X"]}
-    return false
-    win_combination.none?{|i| i = ["O", "O", "O"]}
-    return false
+  WIN_COMBINATIONS.each do |win_combo|
+    board[win_combo[0]] == board[win_combi[1]] && board[win_combo[0]] == board[win_combo[2]] && position_taken?(board, win_combo[1])
   end
 end
